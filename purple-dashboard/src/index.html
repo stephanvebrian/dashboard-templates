@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="/dist/normalize.css" rel="stylesheet">
+    <link href="/dist/styles.css" rel="stylesheet">
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="box-border">
+
+    <div id="sidebar-overlay" class="xl:hidden hidden bg-gray-700 fixed opacity-40 h-full w-full z-[1]"></div>
+
+    <div class="flex flex-wrap">
+        <!-- Sidebar -->
+        <div id="sidebar-block" class="xl:w-1/4 block">
+            <aside id="sidebar" class="fixed w-72 h-screen bg-white pt-[50px] pb-[60px] overflow-y-scroll z-[2]
+                xl:opacity-100">
+                <div class="flex flex-col justify-center items-center">
+                    <button class="absolute top-5 right-7 xl:hidden" id="close-navbar">
+                        <img src="../assets/img/global/navbar-times.svg">
+                    </button>
+                    <div class="w-[90px] h-[90px]">
+                        <img class="w-full" src="../assets/img/global/sidebar/profile.png">
+                    </div>
+                    <h4 class="font-extrabold text-xl text-gray-700 mt-4">Stephan Vebrian</h4>
+                    <p class="text-sm text-center text-gray-500 mb-16">stephanvebrian@gmail.com</p>
+                </div>
+                <div class="pl-8">
+                    <a href="#"
+                        class="h-7 px-3 flex justify-start items-center mb-6 border-r-4 border-solid border-blue-400">
+                        <svg class="w-5 h-5 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 14H14V21H21V14Z" stroke="#4D17E2" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M10 14H3V21H10V14Z" stroke="#4D17E2" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M21 3H14V10H21V3Z" stroke="#4D17E2" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M10 3H3V10H10V3Z" stroke="#4D17E2" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <span class="font-bold text-gray-800">Overview</span>
+                    </a>
+
+                    <a href="#"
+                        class=" h-7 px-3 flex justify-start items-center mb-6 hover:border-r-4 border-solid border-blue-400">
+                        <svg class="w-5 h-5 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 6H21" stroke="#7E8CAC" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <span class="font-bold text-gray-600 hover:text-gray-800">Transaction</span>
+                    </a>
+
+                    <a href="#"
+                        class=" h-7 px-3 flex justify-start items-center mb-6 hover:border-r-4 border-solid border-blue-400">
+                        <svg class="w-5 h-5 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7117 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0034 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92176 4.44061 8.37485 5.27072 7.03255C6.10083 5.69025 7.28825 4.60557 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99476 18.5291 5.47086C20.0052 6.94696 20.885 8.91565 21 11V11.5Z"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span class="font-bold text-gray-600 hover:text-gray-800">Messages</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Content -->
+        <div class="xl:w-3/4 w-full ">
+            <div class="pt-12 px-3 pb-6">
+                <div class="flex items-center">
+                    <button id="open-navbar" class="xl:hidden mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <h2 class="font-extrabold text-3xl text-gray-800">Overview</h2>
+                </div>
+            </div>
+            <div class="pt-2 px-3 pb-6">
+                <div class="flex flex-wrap mb-8">
+                    <div class="w-full">
+                        <h3 class="font-bold text-xl text-gray-800">
+                            Top up Categories
+                        </h3>
+                        <div class="flex flex-wrap">
+                            <div class="md:w-1/4 w-1/2 p-10">
+                                <div class="flex items-center">
+                                    <div
+                                        class="flex justify-center items-center w-14 h-14 mr-3 rounded-full bg-gray-300 overflow-hidden">
+                                        <img class="align-middle" src="/assets/img/home/icon-1.svg">
+                                    </div>
+                                    <p class="leading-6 text-lg text-gray-700">Game<br />Desktop</p>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-base text-gray-700">Total Spent:</p>
+                                    <p class="text-lg text-gray-800">Rp 18.000.500</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-1/2 p-10">
+                                <div class="flex items-center">
+                                    <div
+                                        class="flex justify-center items-center w-14 h-14 mr-3 rounded-full bg-gray-300 overflow-hidden">
+                                        <img class="align-middle" src="/assets/img/home/icon-1.svg">
+                                    </div>
+                                    <p class="leading-6 text-lg text-gray-700">Game<br />Desktop</p>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-base text-gray-700">Total Spent:</p>
+                                    <p class="text-lg text-gray-800">Rp 18.000.500</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-1/2 p-10">
+                                <div class="flex items-center">
+                                    <div
+                                        class="flex justify-center items-center w-14 h-14 mr-3 rounded-full bg-gray-300 overflow-hidden">
+                                        <img class="align-middle" src="/assets/img/home/icon-1.svg">
+                                    </div>
+                                    <p class="leading-6 text-lg text-gray-700">Game<br />Desktop</p>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-base text-gray-700">Total Spent:</p>
+                                    <p class="text-lg text-gray-800">Rp 18.000.500</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 w-1/2 p-10">
+                                <div class="flex items-center">
+                                    <div
+                                        class="flex justify-center items-center w-14 h-14 mr-3 rounded-full bg-gray-300 overflow-hidden">
+                                        <img class="align-middle" src="/assets/img/home/icon-1.svg">
+                                    </div>
+                                    <p class="leading-6 text-lg text-gray-700">Game<br />Desktop</p>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-base text-gray-700">Total Spent:</p>
+                                    <p class="text-lg text-gray-800">Rp 18.000.500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="w-full">
+                        <h3 class="font-bold text-xl text-gray-800">
+                            Latest Transaction
+                        </h3>
+                        <div class="relative overflow-x-auto">
+                            <table class="w-full border-none">
+                                <thead>
+                                    <th class="min-w-[190px] py-5 px-7 text-left text-base font-normal">Games</th>
+                                    <th class="text-base font-normal">Item</th>
+                                    <th class="text-base font-normal">Price</th>
+                                    <th class="text-base font-normal">Status</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4">
+                                            <div class="flex">
+                                                <img class="w-20 h-16 mr-3 rounded-lg" src="/assets/img/home/cover.png"
+                                                    alt="">
+                                                <div class="flex flex-col justify-center">
+                                                    <p class="text-base">Mobile Legends</p>
+                                                    <p class="text-sm text-gray-700">Desktop</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">200 Gold</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Rp 290.000</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">
+                                            <div class="flex">
+                                                <img class="w-20 h-16 mr-3 rounded-lg"
+                                                    src="/assets/img/home/cover-1.png" alt="">
+                                                <div class="flex flex-col justify-center">
+                                                    <p class="text-base">Call of Duty</p>
+                                                    <p class="text-sm text-gray-700">Mobile</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">1500 Gold</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Rp 525.000</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Success</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">
+                                            <div class="flex">
+                                                <img class="w-20 h-16 mr-3 rounded-lg"
+                                                    src="/assets/img/home/cover-2.png" alt="">
+                                                <div class="flex flex-col justify-center">
+                                                    <p class="text-base">Clash of Clans</p>
+                                                    <p class="text-sm text-gray-700">Mobile</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">200 Gold</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Rp 290.000</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">
+                                            <div class="flex">
+                                                <img class="w-20 h-16 mr-3 rounded-lg"
+                                                    src="/assets/img/home/cover-3.png" alt="">
+                                                <div class="flex flex-col justify-center">
+                                                    <p class="text-base">Royal Guard</p>
+                                                    <p class="text-sm text-gray-700">Desktop</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">50 Gold</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Rp 150.000</td>
+                                        <td class="py-3 pl-4 align-middle text-center text-lg">Success</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('close-navbar').addEventListener('click', () => {
+            // Set sidebar to close state
+            document.querySelector('aside#sidebar').classList.remove('opacity-0', 'opacity-100');
+            document.querySelector('aside#sidebar').classList.add('opacity-0');
+
+            document.querySelector('aside#sidebar').classList.toggle('active');
+
+            // Set sidebar screen overlay to hidden
+            document.querySelector('#sidebar-overlay').classList.remove('block', 'hidden');
+            document.querySelector('#sidebar-overlay').classList.add('hidden');
+        });
+
+        document.getElementById('open-navbar').addEventListener('click', () => {
+            // Set sidebar to open state
+            document.querySelector('aside#sidebar').classList.remove('opacity-0', 'opacity-100');
+            document.querySelector('aside#sidebar').classList.add('opacity-100');
+
+            document.querySelector('aside#sidebar').classList.toggle('active');
+
+            // Set sidebar screen overlay to active
+            document.querySelector('#sidebar-overlay').classList.remove('block', 'hidden');
+            document.querySelector('#sidebar-overlay').classList.add('block');
+        })
+
+    </script>
+
+</body>
+
+</html>

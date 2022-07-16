@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#sidebar-block {
+    transition: 1;
+}
+
+aside#sidebar {
+    left: -100vw;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+aside#sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+aside#sidebar.active {
+    left: 0;
+}
+
+@media (min-width: 1280px) {
+    aside#sidebar {
+        left: 0;
+    }
+}
